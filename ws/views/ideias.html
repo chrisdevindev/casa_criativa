@@ -32,23 +32,8 @@
     <main>
         <section id="ideias">
 
-            {% for idea in ideas %}
+        {% include "all_ideas.html" %}
             
-                <div class="idea">
-                    <!--  usa class porque o idea vai repetir três vezes  -->
-                    <img src="{{idea.img}}" alt="{{idea.title}}">
-
-                    <div class="content">
-                        <h3>{{idea.title}}</h3>
-                        <p>{{idea.category}}</p>
-                        <div class="description">
-                            {{idea.description}}
-                        </div>
-                        <a href="{{idea.url}}" target="_blank"> Ir para a ideia</a>
-                    </div>
-                </div>
-
-            {% endfor %}
 
         </section>
 
@@ -63,49 +48,8 @@
 
     <!---------------------------------------- Modal ---------------------------------------------------->
 
-    <div id="modal" class="hide">
-        <div class="content">
-            <h1>Nova Ideia</h1>
-
-
-            <form action="">
-
-                <div class="input-wrapper">
-                    <label for="title">Titulo da Ideia</label>
-                    <input type="text" name="title">
-                </div>
-
-
-                <div class="input-wrapper">
-                    <label for="category">Categoria</label>
-                    <input type="text" name="category">
-                </div>
-
-
-                <div class="input-wrapper">
-                    <label for="image">Link da imagem</label>
-                    <input type="url" name="image">
-                </div>
-
-
-                <div class="input-wrapper">
-                    <label for="description">Digite uma descrição para essa ideia</label>
-                    <textarea name="description" cols="30" rows="10"></textarea>
-                </div>
-
-
-                <div class="input-wrapper">
-                    <label for="link">Link da Ideia</label>
-                    <input type="url" name="link">
-                </div>
-
-                <a href="#" onclick="onOff()">Voltar</a>
-                <button class="button">Salvar</button>
-        </div>
-
-
-        </form>
-    </div>
+    {% include "modal.html" %}
+   
 
     <script src="/script.js"></script>
 
