@@ -1,75 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Criativa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+{% extends "layout.html" %}
 
-<body>
+{% block content %}
 
-    <div id="container">
+<section id="intro">
 
-        <section id="intro">
+    <header>
+        <a href="/">
+            <img src="logo.png" alt="Imagem Logo">
+        </a>
+    </header>
 
-            <header>
-                <a href="/">
-                    <img src="logo.png" alt="Imagem Logo">
-                </a>
-            </header>
+    <main>
 
-            <main>
-
-                <p>
-                    Ficar em casa em períodos longos, não deve ser nada fácil.
-                </p>
-                <p>
-                    Iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>
-                    e tudo que for necessário para
-                    tornar esse momento mais interessante.
-                </p>
-                <p>
-                    Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicioando a sua ideia.
-                </p>
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
+        <p>
+            Iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>
+            e tudo que for necessário para
+            tornar esse momento mais interessante.
+        </p>
+        <p>
+            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicioando a sua ideia.
+        </p>
 
 
-            </main>
+    </main>
 
-            <section id="buttons">
-                <button onclick="onOff()">+ adicionar ideia</button>
-                <a href="/ideias" class="button">Ver Ideias</a> <!-- indo pra rota /ideias -->
-            </section>
+    <section id="buttons">
+        <button onclick="onOff()">+ adicionar ideia</button>
+        <a href="/ideias" class="button">Ver Ideias</a> <!-- indo pra rota /ideias -->
+    </section>
 
-            <footer id="footer">
-                Com ♥️ <a href="https://www.linkedin.com/in/christian-castro-664b03189/" target="_blank">Chris</a>
-            </footer>
+    <footer id="footer">
+        Com ♥️ <a href="https://www.linkedin.com/in/christian-castro-664b03189/" target="_blank">Chris</a>
+    </footer>
 
-        </section>
+</section>
 
 
 
-        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
 
-        <section id="last-ideias">
-  
-            {% include "all_ideas.html" %}
+<section id="last-ideias">
 
-        </section>
-    </div>
+    {% include "all_ideas.html" %}
 
+</section>
 
-    <!---------------------------------------- Modal ---------------------------------------------------->
-
-    {% include "modal.html" %}
-
-
-    <script src="script.js"></script>
-
-</body>
-
-
-</html>
+{% endblock %}

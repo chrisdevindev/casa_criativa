@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.html" %}
+
+{% set bodyId = "page-ideias" %}
+
+{% block title %}
     <title>Ideias - Casa Criativa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+{% block content title%}
 
-</head>
 
-<body id="page-ideias">
-
-<div id="container">
 
         
+    {% block content %}
+
     <header>
         <a href="/">
            <img src="logo.png" alt="Imagem logomarca">
@@ -44,15 +40,5 @@
         Com ♥️ <a href="https://www.linkedin.com/in/christian-castro-664b03189/" target="_blank">Chris</a>
     </footer>
 
-</div>
 
-    <!---------------------------------------- Modal ---------------------------------------------------->
-
-    {% include "modal.html" %}
-   
-
-    <script src="/script.js"></script>
-
-</body>
-
-</html>
+    {% endblock %}
