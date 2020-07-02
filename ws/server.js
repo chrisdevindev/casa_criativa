@@ -44,6 +44,8 @@ const db = require('./db')
 
 
 server.use(express.static("public"))
+server.use(express.urlencoded({ extended: true }))
+
 
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
@@ -56,7 +58,7 @@ server.get("/", function (req, res) {
 
     db.all(`SELECT * FROM ideas`, function (err, rows) {
 
-        if (err){
+        if (err) {
             console.log(err)
             return res.send("Houve um erro com o banco de dados!")
         }
@@ -85,7 +87,7 @@ server.get("/ideias", function (req, res) {
 
     db.all(`SELECT * FROM ideas`, function (err, rows) {
 
-        if (err){
+        if (err) {
             console.log(err)
             return res.send("Houve um erro com o banco de dados!")
         }
@@ -96,10 +98,39 @@ server.get("/ideias", function (req, res) {
         })
 
     })
+})
 
-
+server.post("/", function (req, res) {
+    const query = `
+    INSERT INTO ideas(
+        image,
+        title,
+        category,
+        description,
+        link
+    ) 
     
+    VALUES(?,?,?,?,?); `
 
+    const values = [
+        req.body.image,
+        req.body.title,
+        req.body.category,
+        req.body.description,
+        req.body.link,
+    ]
+
+    /////////////// -- INSERIR DADO NA TABELA -- /////////////////////////////////////////////////////
+
+    db.run(query, values, function (err) { //essa function vai ser chamada quando o dado for inserido
+
+        if (err) {
+            console.log(err)
+            return res.send("Houve um erro com o banco de dados!")
+        }
+
+        return res.redirect("/ideias")
+    })
 })
 
 server.listen(3000)

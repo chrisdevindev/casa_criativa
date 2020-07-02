@@ -15,38 +15,11 @@ db.serialize(function(){
     
     `)
 
-    // const query = `
-    // INSERT INTO ideas(
-    //     image,
-    //     title,
-    //     category,
-    //     description,
-    //     link
-    // ) 
     
-    // VALUES(?,?,?,?,?); `
 
-    // const values = [
-    //     "https://image.flaticon.com/icons/svg/2728/2728995.svg",
-    //     "Curso de Programação",
-    //     "Estudos",
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo ea cupiditate explicabo",
-    //     "https://rocketseat.com.br"
-        
-    // ]
-
-    ///////////////// -- INSERIR DADO NA TABELA -- /////////////////////////////////////////////////////
-
-    // db.run(query, values, function(err){ //essa function vai ser chamada quando o dado for inserido
-
-    //     if(err) return console.log(err)
-
-    //     console.log(this)
-    // }) 
-
-    ///////////////// -- DELETAR DADO NA TABELA --  /////////////////////////////////////////////////////////
+    ///////////// -- DELETAR DADO NA TABELA --  /////////////////////////////////////////////////////////
     
-    // db.run(`DELETE FROM ideas WHERE id = ?`, [1], function(err){
+    // db.run(`DELETE FROM ideas WHERE id = ?`, [3], function(err){
     //     if(err)return console.log(err)
     //     console.log("DELETADO", this)
     // })

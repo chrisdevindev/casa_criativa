@@ -18,6 +18,17 @@ function onOff(){
         
 }
 
+// function checkFields(event){
+    
+//     const valueToChecked = [
+//         "title",
+//         "image",
+//         "category",
+//         "description",
+//         "link",
+//     ]
+// }
+
 
 
 
