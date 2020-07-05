@@ -52,7 +52,7 @@ Clonar esse repositório:
  - git clone https://github.com/CCastro01/casa_criativa
 
 Entrar no repositório:
- - cd casacriativa/ws
+ - cd casa_criativa-master/ws
 
 Instalar as dependências:
  - npm install
