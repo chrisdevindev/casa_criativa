@@ -19,7 +19,7 @@ db.serialize(function(){
 
     ///////////// -- DELETAR DADO NA TABELA --  /////////////////////////////////////////////////////////
     
-    // db.run(`DELETE FROM ideas WHERE id = ?`, [3], function(err){
+    // db.run(`DELETE FROM ideas WHERE id = ?`, [6], function(err){
     //     if(err)return console.log(err)
     //     console.log("DELETADO", this)
     // })

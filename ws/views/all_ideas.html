@@ -1,17 +1,23 @@
-{% for idea in ideas %}
             
-<div class="idea">
-    <!--  usa class porque o idea vai repetir três vezes  -->
-    <img src="{{idea.image}}" alt="{{idea.title}}">
+            
+            
+            {% for idea in ideas %}
+                        
+            <div class="idea">
+                <img src="{{idea.image}}" alt="{{idea.title}}">
 
-    <div class="content">
-        <h3>{{idea.title}}</h3>
-        <p>{{idea.category}}</p>
-        <div class="description">
-            {{idea.description}}
-        </div>
-        <a href="{{idea.link}}" target="_blank"> Ir para a ideia</a>
-    </div>
-</div>
+                <div class="content">
+                    <h3>{{idea.title}}</h3>
+                    <p>{{idea.category}}</p>
+                    <div class="description">
+                        {{idea.description}}
+                    </div>
+                    <a href="{{idea.link}}" target="_blank"> Ir para a ideia</a>
+                </div>
+            </div>
 
-{% endfor %}
+            {% endfor %}
+
+
+
+
