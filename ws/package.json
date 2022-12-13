@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/CCastro01/casa_criativa#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.1",
     "sqlite3": "^4.2.0"
